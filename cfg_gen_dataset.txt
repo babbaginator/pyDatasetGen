@@ -1,0 +1,10 @@
+platform=[twitter,instagram,facebook,youtube,telegram]
+hashtags=[#edmonton,#canada,#chickenwar,#badmonkey,#15minrice,#oilers,#bigoil,#sanctuary,#immigration,#fireisland,#tradewar,#badidea,#sadnews]
+#hashtags=?hashtag
+message=?sentence
+email=?email
+url=?url
+name=?fullname
+date=?date(2023-01-01,2024-12-31)
+comment_count=?int(0,50,2500)
+like_count=?int(0,200,14000)
