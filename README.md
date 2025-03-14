@@ -1,5 +1,7 @@
 **pyDatasetGen** is a free and open-source library for producing customizable randomly generated datasets to be used in testing and development. 
 
+Created by Neil Aitken (neil.aitken@gmail.com) 
+
 ## Development
 pyDatasetGen was originally created by Neil Aitken to provide a simple way to generate customized datasets to test data mining and data visualization code. Sometimes we need 
 to test our code, but want to avoid unnecessary interaction with a dataset that might contain private, proprietary, sensitive, or restricted information. Provided we know the 
