@@ -8,16 +8,20 @@ making unauthorized copies, or having to file repeated requests for access.
 
 ## Features
 **pyDatasetGen** supports the random generation of the following variable types
-1. **sentence**: a string typical of a message or caption
-2. **int**: an integer value generated from the provided min, max, and median values
-3. **date**: a date string (YYYY-MM-DD) generated from the provided start date and end date (both provided in YYYY-MM-DD format)
-4. **email**: a properly formatted email address using only ASCII characters. Email tends to use some part of the user's generated name as part of the account name
-5. **url**: a properly formatted URL, with the possibility of a subpage
-6. **hashtag**: a short randomly generated hashtag that has a '#' prefix
-7. **fullname**: a randomly generated name featuring a first name followed by a last name. Names are drawn from a variety of languages and cultures and represent different genders.
-8. **fullname_rev**: like fullname, but name string displays last name first, followed by a comma, then the first name (eg. "LastName, FirstName"). Good if the column is to be sorted
-9. **firstname**: generates just a first name
-10. **lastname**: generates just a last name (surname)
+1. **comment**: a string typical of a message or caption
+2. **int**: an integer value generated from the provided min and max
+3. **count**: an integer value to represent view counts or likes generated from a min, max, and median (most common value)
+4. **date**: a date string (YYYY-MM-DD) generated from the provided start date and end date (both provided in YYYY-MM-DD format)
+5. **email**: a properly formatted email address using only ASCII characters. Email tends to use some part of the user's generated name as part of the account name
+6. **url**: a properly formatted URL, with the possibility of a subpage
+7. **hashtag**: a short randomly generated hashtag that has a '#' prefix
+8. **fullname**: a randomly generated name featuring a first name followed by a last name. Names are drawn from a variety of languages and cultures and represent different genders.
+9. **fullname_rev**: like fullname, but name string displays last name first, followed by a comma, then the first name (eg. "LastName, FirstName"). Good if the column is to be sorted
+10. **firstname**: generates just a first name
+11. **lastname**: generates just a last name (surname)
+12. **streetaddress**: generates a street address (eg. 123 Mill Bay)
+13. **phonenum**: generates a phone number (eg. 626-123-4567)
+14. **booktitle**: generates a book title
 
 ## Configuration
 
