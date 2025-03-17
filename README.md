@@ -9,21 +9,30 @@ general format of the dataset (categories of data and column names), we create s
 making unauthorized copies, or having to file repeated requests for access.
 
 ## Features
+
+### Variable texts
 **pyDatasetGen** supports the random generation of the following variable types
 1. **comment**: a string typical of a message or caption
 2. **int**: an integer value generated from the provided min and max
 3. **count**: an integer value to represent view counts or likes generated from a min, max, and median (most common value)
-4. **date**: a date string (YYYY-MM-DD) generated from the provided start date and end date (both provided in YYYY-MM-DD format)
-5. **email**: a properly formatted email address using only ASCII characters. Email tends to use some part of the user's generated name as part of the account name
-6. **url**: a properly formatted URL, with the possibility of a subpage
-7. **hashtag**: a short randomly generated hashtag that has a '#' prefix
-8. **fullname**: a randomly generated name featuring a first name followed by a last name. Names are drawn from a variety of languages and cultures and represent different genders.
-9. **fullname_rev**: like fullname, but name string displays last name first, followed by a comma, then the first name (eg. "LastName, FirstName"). Good if the column is to be sorted
-10. **firstname**: generates just a first name
-11. **lastname**: generates just a last name (surname)
-12. **streetaddress**: generates a street address (eg. 123 Mill Bay)
-13. **phonenum**: generates a phone number (eg. 626-123-4567)
-14. **booktitle**: generates a book title
+4. **fixedint**: a string version of a randomly generated number of a certain number of digits (eg. fixedint(6) --> 001318)
+5. **char**: a single character string containing a randomly chosen character picked from a given range (eg. char(A-Z) --> D)
+6. **date**: a date string (YYYY-MM-DD) generated from the provided start date and end date (both provided in YYYY-MM-DD format)
+7. **email**: a properly formatted email address using only ASCII characters. Email tends to use some part of the user's generated name as part of the account name
+8. **url**: a properly formatted URL, with the possibility of a subpage
+9. **hashtag**: a short randomly generated hashtag that has a '#' prefix
+10. **fullname**: a randomly generated name featuring a first name followed by a last name. Names are drawn from a variety of languages and cultures and represent different genders.
+11. **fullname_rev**: like fullname, but name string displays last name first, followed by a comma, then the first name (eg. "LastName, FirstName"). Good if the column is to be sorted
+12. **firstname**: generates just a first name
+13. **lastname**: generates just a last name (surname)
+14. **streetaddress**: generates a street address (eg. 123 Mill Bay)
+15. **phonenum**: generates a phone number (eg. 626-123-4567)
+16. **booktitle**: generates a book title
+17. **callnumber**: generates a call number for a book, either Library of Congress or Dewey Decimal, (eg. callnumber(loc)
+18. **issn**: generates an issn (identification number for a journal or periodical)
+19. **isbn**: generates an isbn (identification number for a book)
+20. **isxn**: randomly generates an issn or isbn
+
 
 ## Configuration
 
@@ -31,7 +40,7 @@ making unauthorized copies, or having to file repeated requests for access.
 This file defines the columns in the dataset and how they should be generated. Entries can be defined as lists (denoted by [] with comma separated elements) or a generated element (? followed by type). 
 Any line can be commented out (disabled) by placing a # at the start.
 
-Example
+Example 1
 ```
 platform=[twitter,instagram,facebook,youtube,telegram]
 hashtags=[#edmonton,#canada,#chickenwar,#badmonkey,#15minrice,#oilers,#bigoil,#sanctuary,#immigration,#fireisland,#tradewar,#badidea,#sadnews]
@@ -43,6 +52,13 @@ name=?fullname
 date=?date(2023-01-01,2024-12-31)
 comment_count=?int(0,50,2500)
 like_count=?int(0,200,14000)
+```
+
+Example 2
+It is also possible to define an entry using a combination of variable types provided they are separated by '+'
+
+```
+userid=char(A-Z)+int(1000,2000)+-+fixedint(6)
 ```
 
 ### CFG_GEN_BASE.TXT
