@@ -36,7 +36,7 @@ making unauthorized copies, or having to file repeated requests for access.
 
 ## Configuration
 
-### CFG_GEN_DATASET
+### CFG_GEN_DATASET.TXT
 This file defines the columns in the dataset and how they should be generated. Entries can be defined as lists (denoted by [] with comma separated elements) or a generated element (? followed by type). 
 Any line can be commented out (disabled) by placing a # at the start.
 
